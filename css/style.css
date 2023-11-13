@@ -1,0 +1,394 @@
+/* 
+Name: Austin Helmick
+Date: 9/20/2023
+Filename: style.css
+*/
+
+/* Reset default styles for common elements */
+body, header, nav, main, footer, h1, div, img, ul {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    list-style-type: none;
+}
+
+/* Set a consistent font family with fallback values */
+body {
+    font-family: 'Francois One', sans-serif;
+    background-color: #f7e077;
+    color: #000;
+}
+
+/* Header Styles */
+header {
+    position: sticky;
+    top: 0;
+    background-color: #FFF;
+    height: 100px; /* Set the desired height */
+    width: 80%; /* Set the desired width */
+    margin: 0 auto; /* Center the header horizontally */
+    font-family: 'Roboto Slab', sans-serif;
+    text-align: center; /* Center the text horizontally */
+    line-height: 100px; /* Center the text vertically */
+    border-radius: 10px; /* Rounded corners */
+}
+
+/* Hide the hero image by default */
+#hero {
+    display: none;
+}
+
+/* Media Query for Tablet Viewport */
+@media (min-width: 769px) and (max-width: 1024px) {
+    #hero {
+        display: block; /* Display hero image on tablets */
+    }
+}
+
+/* Media Query for Large Desktop Viewports */
+@media (min-width: 1025px) {
+    #hero {
+        display: block; /* Display hero image on desktop */
+    }
+}
+
+	#container {
+		width: 1920px;
+		margin: 0 auto;
+	}
+	
+	table {
+		width: 80%;
+	}
+
+/* Navigation Styles */
+nav {
+    margin: 1em 0;
+    text-align: center;
+}
+
+/* Navigation List Item Styles */
+nav li {
+    display: inline-block;
+    font-size: 1.5em;
+    font-family: 'Roboto Slab', sans-serif;
+    font-weight: bold;
+    margin: 0 1em;
+}
+
+/* Navigation Link Styles */
+nav li a {
+    color: #000;
+    text-decoration: none;
+	transition: transform 0.3s ease;
+}
+
+/* creates white box when hover over the Nav link */
+nav li a:hover {
+    color: #000;
+    background-color: #fff;
+	border-radius: 10px; 
+	transform: scale(1.3);
+}
+
+/* Navigation Image Styles */
+nav img.round {
+    display: inline-block;
+    vertical-align: middle; /* Align the image vertically in the middle */
+}
+
+/* Main Content Styles */
+main {
+    background-color: #fff;
+    color: #000;
+    border-radius: 10px;
+    padding: 20px;
+    font-size: 1.15em;
+    font-family: 'Roboto Slab', sans-serif;
+}
+
+/* Make images responsive */
+.responsive {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Container Styles */
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* Hide elements by default */
+.desktop, .tablet, .mobile {
+    display: none;
+}
+
+/* Media Query for Mobile */
+@media (max-width: 768px) {
+    header {
+        height: auto;
+    }
+
+    nav {
+        margin: 20px 0;
+    }
+
+    nav li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .mobile .mobile-nav {
+        display: block;
+    }
+}
+
+/* Media query for Tablet Viewport */
+@media (min-width: 769px) and (max-width: 1024px) {
+    nav li {
+        font-size: 1.75em;
+    }
+
+    .tablet {
+        display: block;
+    }
+	
+	.desktop, #menu-links { 
+		display: none;
+	}
+	
+	
+	.map {
+		width: 600px;
+		height: 450px;
+	}
+	
+	#form {
+		margin-top: 2%;
+		background-color: #FFF;
+		padding: 2%;
+	}
+	
+	#form h2 {
+		text-align: center;
+	}
+}
+
+/* Style Rules for form elements */
+fieldset, input, select, textarea {
+	margin-bottom: 2%;
+}
+
+fieldset legend {
+	font-weight: normal;
+	font-size: 1.25em;
+}
+
+label {
+	display: block;
+	padding-top: 3%;
+}
+
+form #submit {
+	margin: 2%;
+	border: none;
+	display: block;
+	padding: 2%;
+	background-color: #FFF;
+	font-size: 1em;
+	border-radius: 10px;
+}
+
+/* Media query for Large Desktop Viewports */
+@media (min-width: 1025px) {
+    .desktop {
+        display: block;
+    }
+
+    /* Desktop-specific hover effect */
+    .desktop nav li:hover {
+        color: #FFF;
+        background-color: #333;
+    }
+}
+
+/* Reset default styles for common elements and new HTML5 semantic elements */
+body, head nav, main, footer, h1, div, img, ul, article, section, aside, figure, figcaption, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    list-style-type: none;
+    display: block; /* Ensure semantic elements are displayed as blocks by default */
+}
+
+/* Add text shadow to the unordered list inside the main section */
+main ul {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Adjust the shadow values as needed */
+}
+
+/* Add a grid layout to the main content area */
+.main-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Adjust column width as needed */
+    grid-gap: 20px; /* Adjust the gap between grid items */
+}
+
+/* Apply styles to grid items (individual content blocks) */
+.grid-item {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow to grid items */
+    text-align: center;
+}
+
+/* Ensure images inside grid items are responsive */
+.grid-item img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Tablet Viewport: Style rules for table */
+table {
+    border: 1px solid #000;
+    border-collapse: collapse;
+    margin: 0 auto;
+    width: 100%;
+}
+
+caption {
+    font-size: 1.5em;
+    font-weight: bold;
+    padding: 1%;
+}
+
+th, td {
+    border: 1px solid #000;
+    padding: 10px; /* Adjust the padding as needed */
+}
+
+th {
+    background-color: #fff;
+    color: #000;
+    font-size: 1.15em;
+	font-weight: normal;
+}
+
+td {
+    background-color: #fff;
+    color: #000;
+    font-size: 1.15em;
+	font-weight: normal;
+}
+
+tr:nth-child(odd) {
+    background-color: #fff;
+}
+
+/* Desktop Viewport: Style rules for table */
+@media (min-width: 1025px) {
+    table {
+        width: 60%;
+    }
+    
+    th, td {
+        padding: 12px; /* Adjust padding for desktop view */
+    }
+
+    caption {
+        font-size: 1.8em; /* Increase font size for desktop view */
+    }
+}
+
+/* Mobile Viewport: Style rules for table */
+@media (max-width: 768px) {
+    table {
+        width: 100%;
+        margin: 0;
+    }
+
+    th, td {
+        padding: 8px; /* Adjust padding for mobile view */
+    }
+
+    caption {
+        font-size: 1.2em; /* Decrease font size for mobile view */
+    }
+}
+
+video {
+	max-width: 100%;
+	display: blocks;
+}
+
+.mobile-nav a {
+	color: #fff;
+	font-family: 'Francois One', sans-serif;
+	text-align: center;
+	font-size: 2em;
+	text-decoration: none;
+	padding: 3%;
+	display: block;
+}
+
+.mobile-nav a.menu-icon {
+	display: block;
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+
+/* Mobile Viewport: Hide desktop and tablet navigation */
+@media (max-width: 768px) {
+    .desktop, .tablet {
+        display: none;
+    }
+
+    /* Show mobile navigation */
+    .mobile-nav a {
+        display: block;
+        text-align: center;
+        font-size: 2em;
+        text-decoration: none;
+        padding: 3%;
+    }
+
+    .mobile-nav a.menu-icon {
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    .mobile-nav #menu-links {
+        display: none;
+    }
+
+    .mobile-nav.show-menu #menu-links {
+        display: block;
+    }
+}
+
+/* Style rule for footer copyright */
+footer .copyright {
+	padding: 2% 4%;
+	float: left;
+	width: 75%;
+}
+	
+.social { 
+	float: left;
+	width: 20%;
+	padding: 2%;
+}
+
+.social img {
+	display: inline-block;
+	padding: 0%;
+}
+
+	
+	
+
+
